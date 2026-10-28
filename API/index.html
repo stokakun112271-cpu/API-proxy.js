@@ -433,7 +433,7 @@
                 const coverRel = mangaData.relationships.find(r => r.type === 'cover_art');
                 let coverUrl = 'https://via.placeholder.com/300x400';
                 if (coverRel && coverRel.attributes) {
-                    coverUrl = `${PROXY_URL}?type=image&url=${encodeURIComponent(`https://uploads.mangadex.org/covers/${mangaData.id}/${coverRel.attributes.fileName}`)}`;
+                    coverUrl = rawCover;
                 }
 
                 let chapterHtml = chapters.length === 0 ? '<p class="text-slate-500 text-sm">Chapter belum tersedia.</p>' : '';
