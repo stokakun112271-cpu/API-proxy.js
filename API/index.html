@@ -384,7 +384,7 @@
                 let coverUrl = 'https://via.placeholder.com/300x400/0f172a/38bdf8?text=No+Cover';
                 if (coverRel && coverRel.attributes) {
                     const rawCover = `https://uploads.mangadex.org/covers/${manga.id}/${coverRel.attributes.fileName}.512.jpg`;
-                    coverUrl = `${PROXY_URL}?type=image&url=${encodeURIComponent(rawCover)}`;
+                    coverUrl = rawCover;
                 }
 
                 // Badge Chapter
